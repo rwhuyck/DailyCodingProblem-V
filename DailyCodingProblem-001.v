@@ -23,12 +23,17 @@ fn adden(input []int, k int) bool
 {
 	for i in input 
 	{
-		mut diff := k - i
-
-		// no abs function, so creating one
-		if diff < 0
+		// Can't define diff inside the if statement,
+		// must initialize first
+		mut diff := 0
+		
+		if k > i 
 		{
-			diff = -diff
+			diff = k - i
+		}
+		else
+		{
+			diff = i - k
 		}
 
 		if diff in input 
