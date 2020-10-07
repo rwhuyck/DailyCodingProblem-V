@@ -28,7 +28,7 @@ fn element_prod(input []int) []int
 	{
 		mut prod := 1
 
-		// Multiple all other positions except current one
+		// Multiply all other positions except current one
 		for j := 0; j < input.len; j++
 		{
 			if j != i
